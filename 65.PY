@@ -1,6 +1,7 @@
 text = "X-DSPAM-Confidence:    0.8475"
 
-pos = text.find('0')
+pos = text.find(':')
 num = text[pos:]
-fnum = float(num)
+nnum = num.strip()
+fnum = float(nnum)
 print(fnum)
