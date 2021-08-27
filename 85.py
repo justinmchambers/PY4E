@@ -7,9 +7,7 @@ cnt = 0
 
 #Search for email addresses
 for line in fh:
-    if line.startswith('From:'):
-        continue
-    if line.startswith('From'):
+    if line.startswith('From '):
         line = line.rstrip().split()
         print(line[1])
         cnt = cnt + 1
