@@ -4,7 +4,6 @@ if len(f) < 1 :
 
 fh = open(f)
 
-lnames = list()
 dnames = dict()
 
 for line in fh:
@@ -13,10 +12,8 @@ for line in fh:
         if len(line) < 1:
             continue
         words = line.split()
-        lnames.append(words[1])
-
-for name in lnames:
-    dnames[name] = dnames.get(name,0) + 1
+        name = words[1]
+        dnames[name] = dnames.get(name,0) + 1
 
 topc = None
 topn = None
